@@ -56,10 +56,30 @@
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
-// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
-// 6, 1, 33 -> [6, 1, 33]
 
+Console.Clear();
+int[] array = new int[8];
 
+void FillArray(int[] array)// заполнение массива
+{
+    int length=array.Length;
+    for(int index=0; index<length; index++)
+    {
+        array[index]=new Random().Next(0,99);
+    }
+}
+
+void PrintArray (int [] print)
+{
+    int length=array.Length;
+    for(int index=0; index<length; index++)
+    {
+        Console.Write($"_{print[ index ]}_");
+    }
+}
+
+FillArray(array);
+PrintArray(array);
 
 
 
